@@ -12,15 +12,20 @@ class Main {
     numerator = input.nextInt();
     denominator = input.nextInt();
     
-    if(denominator != 0 && numerator / denominator < 1)
-    
-      System.out.println(numerator + "/" + denominator +
-                         " is a proper fraction");
+    if(denominator != 0)
+    {
+      if(numerator / denominator < 1)
+      {
+        System.out.println(numerator + "/" + denominator + " is a proper fraction");
+      }
+      else
+      {
+        System.out.println(numerator + "/" + denominator + " is a improper fraction");
+      }
+    }
     else
-      if(denominator != 0 && numerator / denominator >= 1)
-        System.out.println(numerator + "/" + denominator +
-                          " is an improper fraction");
-    else
+    {
       System.out.println("** Invalid Denominator of 0**");
+    }
   }
 }
